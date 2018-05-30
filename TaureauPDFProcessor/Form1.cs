@@ -31,5 +31,20 @@ namespace TaureauPDFProcessor
                 }
             }
         }
+
+        private void openCSV_Click(object sender, EventArgs e)
+        {
+            string csvName = null;
+
+            using (this.openCSVDialog = new OpenFileDialog())
+            {
+                openCSVDialog.Filter = "pdf files (*.pdf)|*.pdf";
+
+                if (openCSVDialog.ShowDialog() == DialogResult.OK)
+                {
+                    csvName = openCSVDialog.FileName;
+                }
+            }
+        }
     }
 }

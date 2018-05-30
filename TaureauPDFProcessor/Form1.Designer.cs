@@ -30,6 +30,8 @@
         {
             this.openPDFDialog = new System.Windows.Forms.OpenFileDialog();
             this.openPDFButton = new System.Windows.Forms.Button();
+            this.openCSVDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openCSV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -47,11 +49,28 @@
             this.openPDFButton.UseVisualStyleBackColor = true;
             this.openPDFButton.Click += new System.EventHandler(this.openPDFButton_Click);
             // 
+            // openCSVDialog
+            // 
+            this.openCSVDialog.FileName = "openCSVDialog";
+            this.openCSVDialog.Title = "Open CSV";
+            // 
+            // openCSV
+            // 
+            this.openCSV.AccessibleName = "Open CSV";
+            this.openCSV.Location = new System.Drawing.Point(13, 61);
+            this.openCSV.Name = "openCSV";
+            this.openCSV.Size = new System.Drawing.Size(75, 23);
+            this.openCSV.TabIndex = 1;
+            this.openCSV.Text = "Open CSV";
+            this.openCSV.UseVisualStyleBackColor = true;
+            this.openCSV.Click += new System.EventHandler(this.openCSV_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.openCSV);
             this.Controls.Add(this.openPDFButton);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -63,6 +82,8 @@
 
         private System.Windows.Forms.OpenFileDialog openPDFDialog;
         private System.Windows.Forms.Button openPDFButton;
+        private System.Windows.Forms.OpenFileDialog openCSVDialog;
+        private System.Windows.Forms.Button openCSV;
     }
 }
 
