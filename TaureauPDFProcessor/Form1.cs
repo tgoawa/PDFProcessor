@@ -23,7 +23,7 @@ namespace TaureauPDFProcessor
 
             using (this.openPDFDialog = new OpenFileDialog())
             {
-                openPDFDialog.Filter = "pdf files (*.pdf)|*.pdf";
+                openPDFDialog.Filter = "csv files (*.csv)|*.csv";
 
                 if (openPDFDialog.ShowDialog() == DialogResult.OK)
                 {
