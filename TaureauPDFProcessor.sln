@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaureauPDFProcessor", "TaureauPDFProcessor\TaureauPDFProcessor.csproj", "{5BF1FD2E-09AA-40AD-B057-F3A8A318CFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BF1FD2E-09AA-40AD-B057-F3A8A318CFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF1FD2E-09AA-40AD-B057-F3A8A318CFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF1FD2E-09AA-40AD-B057-F3A8A318CFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF1FD2E-09AA-40AD-B057-F3A8A318CFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB5EACE9-DB55-49FA-8474-651198157C01}
+	EndGlobalSection
+EndGlobal
