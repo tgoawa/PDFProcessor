@@ -16,5 +16,20 @@ namespace TaureauPDFProcessor
         {
             InitializeComponent();
         }
+
+        private void openPDFButton_Click(object sender, EventArgs e)
+        {
+            string pdfName = null;
+
+            using (this.openPDFDialog = new OpenFileDialog())
+            {
+                openPDFDialog.Filter = "pdf files (*.pdf)|*.pdf";
+
+                if (openPDFDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pdfName = openPDFDialog.FileName;
+                }
+            }
+        }
     }
 }
