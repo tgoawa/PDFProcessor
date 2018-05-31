@@ -45,7 +45,7 @@ namespace TaureauPDFProcessor
         private void openCSV_Click(object sender, EventArgs e)
         {
             string csvName = null;
-            string[] companyNames = {};
+            string companyNames = "";
 
             using (this.openCSVDialog = new OpenFileDialog())
             {
@@ -58,7 +58,7 @@ namespace TaureauPDFProcessor
 
                 if (csvName != null)
                 {
-                    File.WriteAllLines(csvName, companyNames);
+                    File.WriteAllText(csvName, companyNames);
                 }
 
                 if (companyNames.Length > 0)
