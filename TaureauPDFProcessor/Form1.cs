@@ -13,9 +13,11 @@ namespace TaureauPDFProcessor
 {
     public partial class Form1 : Form
     {
+        private ProjectModel project;
         public Form1()
         {
             InitializeComponent();
+            this.project = new ProjectModel();
             this.projectNameTextBox = new TextBox();
             this.passwordTextBox = new TextBox();
         }
@@ -31,6 +33,11 @@ namespace TaureauPDFProcessor
                 if (openPDFDialog.ShowDialog() == DialogResult.OK)
                 {
                     pdfName = openPDFDialog.FileName;
+                }
+
+                if (pdfName != null)
+                {
+                    this.project.PdfFile = pdfName;
                 }
             }
         }
@@ -54,6 +61,11 @@ namespace TaureauPDFProcessor
                     File.WriteAllLines(csvName, companyNames);
                 }
 
+                if (companyNames.Length > 0)
+                {
+                    this.project.CompanyNames = companyNames;
+                }
+
             }
         }
 
@@ -66,6 +78,11 @@ namespace TaureauPDFProcessor
             if (result == DialogResult.OK)
             {
                 folderName = this.projectSaveDialog.SelectedPath;
+            }
+
+            if (folderName != null)
+            {
+                this.project.SaveLocation = folderName;
             }
         }
     }

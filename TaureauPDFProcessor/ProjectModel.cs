@@ -13,5 +13,6 @@ namespace TaureauPDFProcessor
         public string[] CompanyNames { get; set; }
         public string Password { get; set; }
         private string MasterPassword = "masterpassword";
+        public string SaveLocation { get; set; }
     }
 }
