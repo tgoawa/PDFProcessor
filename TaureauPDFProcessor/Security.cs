@@ -24,7 +24,7 @@ namespace TaureauPDFProcessor
             {
 
                 message = ex.Message;
-                return message
+                return message;
             }
 
         }
