@@ -117,7 +117,7 @@
             this.Controls.Add(this.openCSV);
             this.Controls.Add(this.openPDFButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PDF Processor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
