@@ -38,6 +38,7 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.projectSaveDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.projectSaveLocation = new System.Windows.Forms.Button();
+            this.runProcessButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -118,11 +119,23 @@
             this.projectSaveLocation.UseVisualStyleBackColor = true;
             this.projectSaveLocation.Click += new System.EventHandler(this.projectSaveLocation_Click);
             // 
+            // runProcessButton
+            // 
+            this.runProcessButton.AccessibleName = "Run Process Button";
+            this.runProcessButton.Location = new System.Drawing.Point(16, 284);
+            this.runProcessButton.Name = "runProcessButton";
+            this.runProcessButton.Size = new System.Drawing.Size(75, 23);
+            this.runProcessButton.TabIndex = 7;
+            this.runProcessButton.Text = "Run Process";
+            this.runProcessButton.UseVisualStyleBackColor = true;
+            this.runProcessButton.Click += new System.EventHandler(this.runProcessButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.runProcessButton);
             this.Controls.Add(this.projectSaveLocation);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.projectPasswordLabel);
@@ -149,6 +162,7 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.FolderBrowserDialog projectSaveDialog;
         private System.Windows.Forms.Button projectSaveLocation;
+        private System.Windows.Forms.Button runProcessButton;
     }
 }
 

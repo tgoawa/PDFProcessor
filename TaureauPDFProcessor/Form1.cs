@@ -85,5 +85,13 @@ namespace TaureauPDFProcessor
                 this.project.SaveLocation = folderName;
             }
         }
+
+        private void runProcessButton_Click(object sender, EventArgs e)
+        {
+            var projectToProcess = new ProcessPDF();
+
+            projectToProcess.RunProject(this.project);
+        }
+
     }
 }
