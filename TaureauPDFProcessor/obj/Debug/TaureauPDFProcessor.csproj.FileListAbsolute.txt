@@ -7,3 +7,4 @@ C:\Projects\TaureauPDFProcessor\TaureauPDFProcessor\obj\Debug\TaureauPDFProcesso
 C:\Projects\TaureauPDFProcessor\TaureauPDFProcessor\obj\Debug\TaureauPDFProcessor.csproj.CoreCompileInputs.cache
 C:\Projects\TaureauPDFProcessor\TaureauPDFProcessor\obj\Debug\TaureauPDFProcessor.exe
 C:\Projects\TaureauPDFProcessor\TaureauPDFProcessor\obj\Debug\TaureauPDFProcessor.pdb
+C:\Projects\TaureauPDFProcessor\TaureauPDFProcessor\obj\Debug\TaureauPDFProcessor.csprojResolveAssemblyReference.cache

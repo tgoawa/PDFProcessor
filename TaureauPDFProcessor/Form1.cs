@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace TaureauPDFProcessor
     {
         public Form1()
         {
+            InitializeComponent();
             this.projectNameTextBox = new TextBox();
             this.passwordTextBox = new TextBox();
         }
@@ -24,7 +26,7 @@ namespace TaureauPDFProcessor
 
             using (this.openPDFDialog = new OpenFileDialog())
             {
-                openPDFDialog.Filter = "csv files (*.csv)|*.csv";
+                openPDFDialog.Filter = "pdf files (*.pdf)|*.pdf";
 
                 if (openPDFDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -36,15 +38,22 @@ namespace TaureauPDFProcessor
         private void openCSV_Click(object sender, EventArgs e)
         {
             string csvName = null;
+            string[] companyNames = {};
 
             using (this.openCSVDialog = new OpenFileDialog())
             {
-                openCSVDialog.Filter = "pdf files (*.pdf)|*.pdf";
+                openCSVDialog.Filter = "csv files (*.csv)|*.csv";
 
                 if (openCSVDialog.ShowDialog() == DialogResult.OK)
                 {
                     csvName = openCSVDialog.FileName;
                 }
+
+                if (csvName != null)
+                {
+                    File.WriteAllLines(csvName, companyNames);
+                }
+
             }
         }
 
