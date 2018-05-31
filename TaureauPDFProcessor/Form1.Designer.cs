@@ -32,6 +32,8 @@
             this.openPDFButton = new System.Windows.Forms.Button();
             this.openCSVDialog = new System.Windows.Forms.OpenFileDialog();
             this.openCSV = new System.Windows.Forms.Button();
+            this.projectNameLabel = new System.Windows.Forms.Label();
+            this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -65,16 +67,37 @@
             this.openCSV.UseVisualStyleBackColor = true;
             this.openCSV.Click += new System.EventHandler(this.openCSV_Click);
             // 
+            // projectNameLabel
+            // 
+            this.projectNameLabel.AccessibleName = "Porject Name Label";
+            this.projectNameLabel.AutoSize = true;
+            this.projectNameLabel.Location = new System.Drawing.Point(13, 107);
+            this.projectNameLabel.Name = "projectNameLabel";
+            this.projectNameLabel.Size = new System.Drawing.Size(71, 13);
+            this.projectNameLabel.TabIndex = 2;
+            this.projectNameLabel.Text = "Project Name";
+            // 
+            // projectNameTextBox
+            // 
+            this.projectNameTextBox.AccessibleName = "Project Name Textbox";
+            this.projectNameTextBox.Location = new System.Drawing.Point(16, 124);
+            this.projectNameTextBox.Name = "projectNameTextBox";
+            this.projectNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.projectNameTextBox.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.projectNameTextBox);
+            this.Controls.Add(this.projectNameLabel);
             this.Controls.Add(this.openCSV);
             this.Controls.Add(this.openPDFButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,6 +107,8 @@
         private System.Windows.Forms.Button openPDFButton;
         private System.Windows.Forms.OpenFileDialog openCSVDialog;
         private System.Windows.Forms.Button openCSV;
+        private System.Windows.Forms.Label projectNameLabel;
+        private System.Windows.Forms.TextBox projectNameTextBox;
     }
 }
 

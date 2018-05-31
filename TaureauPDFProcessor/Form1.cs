@@ -15,6 +15,7 @@ namespace TaureauPDFProcessor
         public Form1()
         {
             InitializeComponent();
+            this.projectNameTextBox = new TextBox();
         }
 
         private void openPDFButton_Click(object sender, EventArgs e)
@@ -46,5 +47,6 @@ namespace TaureauPDFProcessor
                 }
             }
         }
+
     }
 }
