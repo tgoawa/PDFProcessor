@@ -48,5 +48,16 @@ namespace TaureauPDFProcessor
             }
         }
 
+        private void projectSaveLocation_Click(object sender, EventArgs e)
+        {
+            string folderName = null;
+
+            DialogResult result = this.projectSaveDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                folderName = this.projectSaveDialog.SelectedPath;
+            }
+        }
     }
 }

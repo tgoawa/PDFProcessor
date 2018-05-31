@@ -36,6 +36,8 @@
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.projectPasswordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.projectSaveDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.projectSaveLocation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -91,7 +93,7 @@
             // 
             this.projectPasswordLabel.AccessibleName = "Password Label";
             this.projectPasswordLabel.AutoSize = true;
-            this.projectPasswordLabel.Location = new System.Drawing.Point(16, 163);
+            this.projectPasswordLabel.Location = new System.Drawing.Point(13, 165);
             this.projectPasswordLabel.Name = "projectPasswordLabel";
             this.projectPasswordLabel.Size = new System.Drawing.Size(89, 13);
             this.projectPasswordLabel.TabIndex = 4;
@@ -100,16 +102,28 @@
             // passwordTextBox
             // 
             this.passwordTextBox.AccessibleName = "Project Password Text Box";
-            this.passwordTextBox.Location = new System.Drawing.Point(19, 180);
+            this.passwordTextBox.Location = new System.Drawing.Point(16, 182);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 5;
+            // 
+            // projectSaveLocation
+            // 
+            this.projectSaveLocation.AccessibleName = "Folder Save button";
+            this.projectSaveLocation.Location = new System.Drawing.Point(16, 237);
+            this.projectSaveLocation.Name = "projectSaveLocation";
+            this.projectSaveLocation.Size = new System.Drawing.Size(166, 23);
+            this.projectSaveLocation.TabIndex = 6;
+            this.projectSaveLocation.Text = "Select Project Save Location";
+            this.projectSaveLocation.UseVisualStyleBackColor = true;
+            this.projectSaveLocation.Click += new System.EventHandler(this.projectSaveLocation_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.projectSaveLocation);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.projectPasswordLabel);
             this.Controls.Add(this.projectNameTextBox);
@@ -133,6 +147,8 @@
         private System.Windows.Forms.TextBox projectNameTextBox;
         private System.Windows.Forms.Label projectPasswordLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.FolderBrowserDialog projectSaveDialog;
+        private System.Windows.Forms.Button projectSaveLocation;
     }
 }
 
