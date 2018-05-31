@@ -14,6 +14,7 @@ namespace TaureauPDFProcessor
     {
         public Form1()
         {
+            InitializeComponent();
             this.projectNameTextBox = new TextBox();
             this.passwordTextBox = new TextBox();
         }
