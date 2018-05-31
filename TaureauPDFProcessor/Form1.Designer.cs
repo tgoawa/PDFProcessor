@@ -34,6 +34,8 @@
             this.openCSV = new System.Windows.Forms.Button();
             this.projectNameLabel = new System.Windows.Forms.Label();
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
+            this.projectPasswordLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -85,11 +87,31 @@
             this.projectNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.projectNameTextBox.TabIndex = 3;
             // 
+            // projectPasswordLabel
+            // 
+            this.projectPasswordLabel.AccessibleName = "Password Label";
+            this.projectPasswordLabel.AutoSize = true;
+            this.projectPasswordLabel.Location = new System.Drawing.Point(16, 163);
+            this.projectPasswordLabel.Name = "projectPasswordLabel";
+            this.projectPasswordLabel.Size = new System.Drawing.Size(89, 13);
+            this.projectPasswordLabel.TabIndex = 4;
+            this.projectPasswordLabel.Text = "Project Password";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.AccessibleName = "Project Password Text Box";
+            this.passwordTextBox.Location = new System.Drawing.Point(19, 180);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordTextBox.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.projectPasswordLabel);
             this.Controls.Add(this.projectNameTextBox);
             this.Controls.Add(this.projectNameLabel);
             this.Controls.Add(this.openCSV);
@@ -109,6 +131,8 @@
         private System.Windows.Forms.Button openCSV;
         private System.Windows.Forms.Label projectNameLabel;
         private System.Windows.Forms.TextBox projectNameTextBox;
+        private System.Windows.Forms.Label projectPasswordLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
     }
 }
 
