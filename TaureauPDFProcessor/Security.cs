@@ -9,24 +9,26 @@ namespace TaureauPDFProcessor
 {
     class Security
     {
-        public static string SetSecurity(PdfDocument pdf, string companyName)
+        public AdobeDTO SetSecurity(PdfDocument pdf, string companyName)
         {
-            string message = null;
+            AdobeDTO dto = new AdobeDTO();
+            dto.pdf = null;
+            dto.Message = String.Empty;
             try
             {
                 pdf.Security.KeySize = Spire.Pdf.Security.PdfEncryptionKeySize.Key256Bit;
                 pdf.Security.OwnerPassword = "schenck";
                 pdf.Security.UserPassword = companyName;
                 pdf.Security.Permissions = Spire.Pdf.Security.PdfPermissionsFlags.Print;
-                return message;
+                dto.pdf = pdf;
             }
             catch (Exception ex)
             {
 
-                message = ex.Message;
-                return message;
+                dto.Message = ex.Message;
             }
 
+            return dto;
         }
     }
 }
