@@ -43,6 +43,7 @@
             this.submitLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.processingLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -165,11 +166,21 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 15;
             // 
+            // processingLabel
+            // 
+            this.processingLabel.AutoSize = true;
+            this.processingLabel.Location = new System.Drawing.Point(432, 353);
+            this.processingLabel.Name = "processingLabel";
+            this.processingLabel.Size = new System.Drawing.Size(29, 13);
+            this.processingLabel.TabIndex = 16;
+            this.processingLabel.Text = "label";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.processingLabel);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.submitLabel);
@@ -206,6 +217,7 @@
         private System.Windows.Forms.Label submitLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label processingLabel;
     }
 }
 

@@ -13,29 +13,32 @@ namespace TaureauPDFProcessor
     {
         Watermark water = new Watermark();
         Security sec = new Security();
-        public void RunProject(ProjectModel project)
+        public async void RunProject(ProjectModel project)
         {   
             try
             {
                 foreach (string company in project.CompanyNames)
                 {
+                    string str = company;
+                    string companyName = str.Replace("\"", "");
                     PdfDocument doc = new PdfDocument();
                     AdobeDTO dto = new AdobeDTO();
                     doc.LoadFromFile(project.PdfFile);
-                    dto = water.CreateWatermark(doc, company);
+                    dto = water.CreateWatermark(doc, companyName);
                     if (dto.pdf == null)
                     {
-                        Console.Write("Issue with " + company + dto.Message);
+                        Console.Write("Issue with " + companyName + dto.Message);
                     }
 
                     else
                     {
                         dto = sec.SetSecurity(dto.pdf, project.Password);
-                        string saveName = project.ProjectName + "-" + company + ".pdf";
+                        string saveName = project.ProjectName + "-" + companyName + ".pdf";
                         doc = dto.pdf;
                         doc.SaveToFile(project.SaveLocation + " \\ " + saveName);
                     }
-                   
+
+                    await Task.Delay(500);
                 }
             }
             catch (Exception)

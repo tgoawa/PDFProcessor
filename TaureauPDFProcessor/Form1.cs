@@ -119,6 +119,7 @@ namespace TaureauPDFProcessor
                 return;
             }
             this.submitLabel.Text = "";
+            this.processingLabel.Text = "Now processing " + this.project.CompanyNames.Length + " different companies";
             projectToProcess.RunProject(this.project);
         }
 
