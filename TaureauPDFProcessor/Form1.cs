@@ -89,7 +89,7 @@ namespace TaureauPDFProcessor
         private void runProcessButton_Click(object sender, EventArgs e)
         {
             var projectToProcess = new ProcessPDF();
-
+            this.project.ProjectName = this.projectNameTextBox.Text;
             projectToProcess.RunProject(this.project);
         }
 

@@ -29,7 +29,9 @@ namespace TaureauPDFProcessor
                     }
                     else
                     {
+                        string saveName = project.ProjectName + company + ".pdf";
                         doc = sec.SetSecurity(doc, project.Password);
+                        doc.SaveToFile(project.SaveLocation + saveName);
                     }
 
                 }

@@ -14,5 +14,6 @@ namespace TaureauPDFProcessor
         public string Password { get; set; }
         private string MasterPassword = "masterpassword";
         public string SaveLocation { get; set; }
+        public string ProjectName { get; set; }
     }
 }
