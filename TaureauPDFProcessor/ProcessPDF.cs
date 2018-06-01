@@ -29,8 +29,9 @@ namespace TaureauPDFProcessor
                     }
                     else
                     {
-                        doc = dto.pdf;
+                        doc = sec.SetSecurity(doc, project.Password);
                     }
+
                 }
             }
             catch (Exception)
