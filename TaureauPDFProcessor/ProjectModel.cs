@@ -10,7 +10,7 @@ namespace TaureauPDFProcessor
     {
         public int Id { get; set; }
         public string PdfFile { get; set; }
-        public string CompanyNames { get; set; }
+        public string[] CompanyNames { get; set; }
         public string Password { get; set; }
         private string MasterPassword = "masterpassword";
         public string SaveLocation { get; set; }

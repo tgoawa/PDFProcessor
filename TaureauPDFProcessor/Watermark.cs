@@ -11,9 +11,11 @@ namespace TaureauPDFProcessor
 {
     class Watermark
     {
-        public static string CreateWatermark(PdfDocument doc, string companyName)
+        public AdobeDTO CreateWatermark(PdfDocument doc, string companyName)
         {
-            string message = null;
+            AdobeDTO dto = new AdobeDTO();
+            dto.pdf = null;
+            dto.Message = String.Empty;
             try
             {
                 foreach (PdfPageBase page in doc.Pages)
@@ -30,15 +32,15 @@ namespace TaureauPDFProcessor
                     brush.Graphics.SetTransparency(1);
                     page.Canvas.DrawRectangle(brush, new RectangleF(new PointF(0, 0), page.Canvas.ClientSize));
                 }
-                return message;
+                dto.pdf = doc;
             }
 
             catch (Exception ex)
             {
-                message = ex.Message;
-                return message;
-                
+                dto.Message = ex.Message;
             }
+
+            return dto;
         }
     }
 }
