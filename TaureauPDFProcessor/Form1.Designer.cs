@@ -33,12 +33,16 @@
             this.openCSVDialog = new System.Windows.Forms.OpenFileDialog();
             this.openCSV = new System.Windows.Forms.Button();
             this.projectNameLabel = new System.Windows.Forms.Label();
-            this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.projectPasswordLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.projectSaveDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.projectSaveLocation = new System.Windows.Forms.Button();
             this.runProcessButton = new System.Windows.Forms.Button();
+            this.pdfPath = new System.Windows.Forms.Label();
+            this.csvPath = new System.Windows.Forms.Label();
+            this.saveLocationPath = new System.Windows.Forms.Label();
+            this.submitLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -82,14 +86,6 @@
             this.projectNameLabel.TabIndex = 2;
             this.projectNameLabel.Text = "Project Name";
             // 
-            // projectNameTextBox
-            // 
-            this.projectNameTextBox.AccessibleName = "Project Name Textbox";
-            this.projectNameTextBox.Location = new System.Drawing.Point(16, 124);
-            this.projectNameTextBox.Name = "projectNameTextBox";
-            this.projectNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.projectNameTextBox.TabIndex = 3;
-            // 
             // projectPasswordLabel
             // 
             this.projectPasswordLabel.AccessibleName = "Password Label";
@@ -99,14 +95,6 @@
             this.projectPasswordLabel.Size = new System.Drawing.Size(89, 13);
             this.projectPasswordLabel.TabIndex = 4;
             this.projectPasswordLabel.Text = "Project Password";
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.AccessibleName = "Project Password Text Box";
-            this.passwordTextBox.Location = new System.Drawing.Point(16, 182);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
-            this.passwordTextBox.TabIndex = 5;
             // 
             // projectSaveLocation
             // 
@@ -130,16 +118,67 @@
             this.runProcessButton.UseVisualStyleBackColor = true;
             this.runProcessButton.Click += new System.EventHandler(this.runProcessButton_Click);
             // 
+            // pdfPath
+            // 
+            this.pdfPath.AutoSize = true;
+            this.pdfPath.Location = new System.Drawing.Point(111, 27);
+            this.pdfPath.Name = "pdfPath";
+            this.pdfPath.Size = new System.Drawing.Size(0, 13);
+            this.pdfPath.TabIndex = 10;
+            // 
+            // csvPath
+            // 
+            this.csvPath.AutoSize = true;
+            this.csvPath.Location = new System.Drawing.Point(111, 66);
+            this.csvPath.Name = "csvPath";
+            this.csvPath.Size = new System.Drawing.Size(0, 13);
+            this.csvPath.TabIndex = 11;
+            // 
+            // saveLocationPath
+            // 
+            this.saveLocationPath.AutoSize = true;
+            this.saveLocationPath.Location = new System.Drawing.Point(197, 242);
+            this.saveLocationPath.Name = "saveLocationPath";
+            this.saveLocationPath.Size = new System.Drawing.Size(0, 13);
+            this.saveLocationPath.TabIndex = 12;
+            // 
+            // submitLabel
+            // 
+            this.submitLabel.AutoSize = true;
+            this.submitLabel.ForeColor = System.Drawing.Color.Red;
+            this.submitLabel.Location = new System.Drawing.Point(111, 289);
+            this.submitLabel.Name = "submitLabel";
+            this.submitLabel.Size = new System.Drawing.Size(0, 13);
+            this.submitLabel.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(16, 132);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(16, 190);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.submitLabel);
+            this.Controls.Add(this.saveLocationPath);
+            this.Controls.Add(this.csvPath);
+            this.Controls.Add(this.pdfPath);
             this.Controls.Add(this.runProcessButton);
             this.Controls.Add(this.projectSaveLocation);
-            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.projectPasswordLabel);
-            this.Controls.Add(this.projectNameTextBox);
             this.Controls.Add(this.projectNameLabel);
             this.Controls.Add(this.openCSV);
             this.Controls.Add(this.openPDFButton);
@@ -157,12 +196,16 @@
         private System.Windows.Forms.OpenFileDialog openCSVDialog;
         private System.Windows.Forms.Button openCSV;
         private System.Windows.Forms.Label projectNameLabel;
-        private System.Windows.Forms.TextBox projectNameTextBox;
         private System.Windows.Forms.Label projectPasswordLabel;
-        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.FolderBrowserDialog projectSaveDialog;
         private System.Windows.Forms.Button projectSaveLocation;
         private System.Windows.Forms.Button runProcessButton;
+        private System.Windows.Forms.Label pdfPath;
+        private System.Windows.Forms.Label csvPath;
+        private System.Windows.Forms.Label saveLocationPath;
+        private System.Windows.Forms.Label submitLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

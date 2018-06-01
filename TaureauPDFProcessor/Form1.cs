@@ -18,8 +18,6 @@ namespace TaureauPDFProcessor
         {
             InitializeComponent();
             this.project = new ProjectModel();
-            this.projectNameTextBox = new TextBox();
-            this.passwordTextBox = new TextBox();
         }
 
         private void openPDFButton_Click(object sender, EventArgs e)
@@ -38,6 +36,7 @@ namespace TaureauPDFProcessor
                 if (pdfName != null)
                 {
                     this.project.PdfFile = pdfName;
+                    this.pdfPath.Text = pdfName;
                 }
             }
         }
@@ -58,7 +57,8 @@ namespace TaureauPDFProcessor
 
                 if (csvName != null)
                 {
-                    File.WriteAllLines(csvName, companyNames);
+                    companyNames = File.ReadAllLines(csvName);
+                    this.csvPath.Text = csvName;
                 }
 
                 if (companyNames.Length > 0)
@@ -83,13 +83,42 @@ namespace TaureauPDFProcessor
             if (folderName != null)
             {
                 this.project.SaveLocation = folderName;
+                this.saveLocationPath.Text = folderName;
             }
         }
 
         private void runProcessButton_Click(object sender, EventArgs e)
         {
             var projectToProcess = new ProcessPDF();
-            this.project.ProjectName = this.projectNameTextBox.Text;
+            this.project.ProjectName = this.textBox1.Text;
+            this.project.Password = this.textBox2.Text;
+
+            if (String.IsNullOrEmpty(this.pdfPath.Text))
+            {
+                this.submitLabel.Text = "No PDF selected";
+                return;
+            }
+            if (String.IsNullOrEmpty(this.csvPath.Text))
+            {
+                this.submitLabel.Text = "No CSV selected";
+                return;
+            }
+            if (String.IsNullOrEmpty(this.project.ProjectName))
+            {
+                this.submitLabel.Text = "No Project name selected";
+                return;
+            }
+            if (String.IsNullOrEmpty(this.project.Password))
+            {
+                this.submitLabel.Text = "No password chosen";
+                return;
+            }
+            if (String.IsNullOrEmpty(this.saveLocationPath.Text))
+            {
+                this.submitLabel.Text = "No save location chosen";
+                return;
+            }
+            this.submitLabel.Text = "";
             projectToProcess.RunProject(this.project);
         }
 

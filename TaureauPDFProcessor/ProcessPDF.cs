@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,12 @@ namespace TaureauPDFProcessor
 {
     class ProcessPDF
     {
+        Watermark water = new Watermark();
+        Security sec = new Security();
         public void RunProject(ProjectModel project)
         {   
-            Watermark water = new Watermark();
-            Security sec = new Security();
             try
             {
-                Directory.SetCurrentDirectory(project.PdfFile);
                 foreach (string company in project.CompanyNames)
                 {
                     PdfDocument doc = new PdfDocument();
@@ -27,13 +27,15 @@ namespace TaureauPDFProcessor
                     {
                         Console.Write("Issue with " + company + dto.Message);
                     }
+
                     else
                     {
-                        string saveName = project.ProjectName + company + ".pdf";
-                        doc = sec.SetSecurity(doc, project.Password);
-                        doc.SaveToFile(project.SaveLocation + saveName);
+                        dto = sec.SetSecurity(dto.pdf, project.Password);
+                        string saveName = project.ProjectName + "-" + company + ".pdf";
+                        doc = dto.pdf;
+                        doc.SaveToFile(project.SaveLocation + " \\ " + saveName);
                     }
-
+                   
                 }
             }
             catch (Exception)
@@ -42,5 +44,20 @@ namespace TaureauPDFProcessor
             }
         }
 
+        //private PdfDocument createWaterMark(PdfDocument doc, string companyName)
+        //{
+        //    //AdobeDTO waterMarkDto = new AdobeDTO();
+        //    //waterMarkDto = water.CreateWatermark(doc, companyName);
+
+        //    //if (waterMarkDto.pdf == null)
+        //    //{
+        //    //    Debug.WriteLine("Issue with " + companyName + waterMarkDto.Message);
+        //    //    return;
+        //    //}
+        //    //else
+        //    //{
+        //    //    return waterMarkDto.pdf;
+        //    //}
+        //}
     }
 }
