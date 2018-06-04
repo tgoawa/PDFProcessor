@@ -28,24 +28,23 @@ namespace TaureauPDFProcessor
                     doc.LoadFromFile(project.PdfFile);
                     Watermark wm = new Watermark();
                     Security sec = new Security();
-                    dto = await CreateWaterMark(wm,doc, company);
-                    if (!string.IsNullOrEmpty(dto.Message))
-                        return dto.Message;
-                    dto = await SetSecurity(sec, dto.pdf, project.Password, company);
+
+                    dto = await CreateWaterMark(wm,doc, companyName);
                     if (!string.IsNullOrEmpty(dto.Message))
                         return dto.Message;
 
-                    //if (doc != null)
-                    //{
-                    //    doc = SetSecurity(doc, project.Password, companyName);
-                    //    string saveName = project.ProjectName + "-" + companyName + ".pdf";
-                    //    doc.SaveToFile(project.SaveLocation + " \\ " + saveName);
-                    //}
+                    dto = await SetSecurity(sec, dto.pdf, project.Password, companyName);
+                    if (!string.IsNullOrEmpty(dto.Message))
+                        return dto.Message;
+
+                    dto = await SavePDF(dto.pdf, project.ProjectName, project.SaveLocation, companyName);
+                    if (!string.IsNullOrEmpty(dto.Message))
+                        return dto.Message;
 
                     await Task.Delay(500);
                 }
 
-                return "Complete!";
+                return string.Empty;
             }
             catch (Exception e)
             {
@@ -118,6 +117,50 @@ namespace TaureauPDFProcessor
                 dto.Message = e.Message;
                 return dto;
             }
+        }
+
+        public async Task<AdobeDTO> SavePDF(PdfDocument doc, string projectName, string saveLocation, string companyName)
+        {
+            AdobeDTO dto = new AdobeDTO();
+
+            if (doc == null)
+            {
+                dto.pdf = null;
+                dto.Message = "PDF Document was empty";
+                return dto;
+            }
+            if (string.IsNullOrEmpty(projectName))
+            {
+                dto.pdf = new PdfDocument();
+                dto.Message = "Project name was empty";
+                return dto;
+            }
+            if (string.IsNullOrEmpty(saveLocation))
+            {
+                dto.pdf = new PdfDocument();
+                dto.Message = "Save location was empty";
+                return dto;
+            }
+            if (string.IsNullOrEmpty(companyName))
+            {
+                dto.pdf = new PdfDocument();
+                dto.Message = "Company name was empty";
+                return dto;
+            }
+            try
+            {
+                string saveName = projectName + "-" + companyName + ".pdf";
+                doc.SaveToFile(saveLocation + " \\ " + saveName);
+                dto.Message = string.Empty;
+                return dto;
+            }
+            catch(Exception e)
+            {
+                dto.pdf = null;
+                dto.Message = e.Message;
+                return dto;
+            }
+
         }
 
     }

@@ -120,13 +120,18 @@ namespace TaureauPDFProcessor
             }
             this.submitLabel.Text = "";
             this.processingLabel.Text = "Now processing " + this.project.CompanyNames.Length + " different companies";
-            string message= await  projectToProcess.RunProject(this.project);
+            string message = await projectToProcess.RunProject(this.project);
             if (string.IsNullOrEmpty(message))
+            {
                 message = "Process completed";
-            //if (isfinished)
-            //{
-            //    this.submitLabel.Text = message;
-            //}
+                this.processingLabel.Text = message;
+                MessageBox.Show("Finished processing");
+            }
+            else
+            {
+                this.processingLabel.Text = message;
+                MessageBox.Show(message);
+            }
         }
 
     }
