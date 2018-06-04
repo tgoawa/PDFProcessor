@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<License Key="abMBAFRaIXP0wgwVbuG9D8V86V1CoSXyiKCa0Wa9iHpk+Sz5A7xzjqzhnC3QYcHbn84voKLy8Aw59EGqJYEwu0DAUrNtKKReDcnERebpc/i1dpPqD3odJgIE5uvBCMGJdXuVlG3a8zuPRIFgCDI7+F5PFk5QTvp9bYxVv4l426cqGf3UYRx7nhIki85BFrbX6tFNCQkgxa7rFkns8f+90RY5/2eJ4vNHfYEpwRO3EXlDlMnzLm3r3mxgitSt8tnM+/BDHJVSF2C6dIQzN9IzXxL4UgXJL1ol56NfvOGFIR+AYPaIDvIOcALXsoQv95rffTYahMevSdIqS3/+qH7tMGfCK6iCjtvlC3pVv8HqowgFKbtcf4/MJ2HHv4epoPis0phay4E+XuexgMfDKZCrfXnlzVn4i5CScBHQ9+vX27nDYqnXRwta6JJazZmxGO74oC9FkdUp75pAPbz1Zdn70jFqbJnFF7ossGCxdsCsT4OUp8O1xgP3+r3Sra91XdXluHJWxGo8dWWKOeKNMzWlgyPVkBKdWERnCkqirmM4NuOsiLRfoDJ8J06GxRmxuKWVH+8LcUJPpB84AafDI0BXD8BkI2S7UFXoUmw8U2ZnXv/SEUtvsZD9Ju3ewnk1Z88RFXkrq7CkBsIK/kzBXJYbcEIZkD/NxwNm8veOjW9dbtjMz5a4st9rxYEQsFydKMCDx4omBz6R2q9PCJtY1tJ0uqCaJfMyG3pODje8XegQ6W4E1/PXgKrq0WNB2GJBOl50oofjzJ+ewIlI+pFst3QDT+Xns9PVyNCOBBdtYyxNkcfmvw0E25VhuGX4lAxBPSc67i6gxFuIkO2K1R+eeG8k4CufN8iOso/eot1zBncaq+Rjptvi4tcC0vlspJqLMptFEahENLn9OjFzrqvI7paBlsIuYoNXxrtSYNMUpW8xquMV4ZXhoB7L6Ee/gsdN2Q3ob997gfnRLHPqLJYUVym208t7VZYra3ucj2QERlJ+NTORIqGztGjMfR4cUK3llEiF/67y4AKbbe5nHwmbeEI4xOXPgAs9xF/GMBjQEf0F4xuvEJN47RCC0Qia2UNSnIUlToU/DY/F8aaRz90wp70DBoVFKjCubgHnSd0FPUNnq2BY8lOjH/+Ccfrl8aNAeWAOJMix3VFBevvXEe/ZivpgGM/4dn8aJnL7OYkOgkFFUEhmnr88xnmHcKyPNs48k1jV5tn8IprM7JQcbv/As7RpX2yB+S6M/9RLHBv0Tj3+C5BlRwVJj37cCIXccPLWfUUwYCK4HOXCIh1ndL+U3IDIwwTTJ8ajR8mN1feZw8xG2u0Qkcu85+ZYiZeBmZlbsUOk37AzqBGCeuVilREi+FKJrII2v6/mEHkKoqUKyNCo4kOj8U/A0KRDHBD4p5whcwIbLcv4UNWWhraYGUSm/CvvlslX262ByBhdgBfR2HVcIqOoTCuUW4L6C3wo95FMJzNIIsMUJ7t5+skLCwfbxY/rsMh3lnuh295m" Version="1.3">
+    <Type>Runtime</Type>
+    <Username>Jeff Child</Username>
+    <Email>jeff.child@schencksc.com</Email>
+    <Organization>Schenck</Organization>
+    <LicensedDate>2018-05-24T12:00:00Z</LicensedDate>
+    <ExpiredDate>2019-05-24T12:00:00Z</ExpiredDate>
+    <Products>
+        <Product>
+            <Name>Spire.PDF Pro Edition</Name>
+            <Version>3.9</Version>
+            <Subscription>
+                <NumberOfPermittedDeveloper>1</NumberOfPermittedDeveloper>
+                <NumberOfPermittedSite>1</NumberOfPermittedSite>
+            </Subscription>
+        </Product>
+    </Products>
+    <Issuer>
+        <Name>e-iceblue</Name>
+        <Email>sales@e-iceblue.com</Email>
+        <Url>http://www.e-iceblue.com</Url>
+    </Issuer>
+</License>
