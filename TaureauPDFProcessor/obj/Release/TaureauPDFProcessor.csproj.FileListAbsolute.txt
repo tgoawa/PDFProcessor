@@ -1,0 +1,15 @@
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\TaureauPDFProcessor.exe.config
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\TaureauPDFProcessor.exe
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\TaureauPDFProcessor.pdb
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\Spire.License.dll
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\Spire.Pdf.dll
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\Microsoft.mshtml.dll
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\Spire.License.xml
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\bin\Release\Spire.Pdf.xml
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.Form1.resources
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.Properties.Resources.resources
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.csproj.GenerateResource.cache
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.csproj.CoreCompileInputs.cache
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.csproj.CopyComplete
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.exe
+D:\Projects\Visual Studio\TaureauPDFProcessor\TaureauPDFProcessor\obj\Release\TaureauPDFProcessor.pdb
