@@ -7,8 +7,9 @@ using Spire.Pdf;
 
 namespace TaureauPDFProcessor
 {
-    class AdobeDTO
+    public class AdobeDTO
     {
+        
         public PdfDocument pdf { get; set; }
         public string Message { get; set; }
     }

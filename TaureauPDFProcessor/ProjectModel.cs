@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaureauPDFProcessor
 {
-    class ProjectModel
+    public class ProjectModel
     {
         public int Id { get; set; }
         public string PdfFile { get; set; }

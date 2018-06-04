@@ -9,16 +9,11 @@ using Spire.Pdf.Graphics;
 
 namespace TaureauPDFProcessor
 {
-    class Watermark
+    public class Watermark :IWatermark  
     {
-        public AdobeDTO CreateWatermark(PdfDocument doc, string companyName)
+        public Task<PdfDocument> CreateWatermark(PdfDocument doc, string companyName)
         {
-            AdobeDTO dto = new AdobeDTO();
-            dto.pdf = null;
-            dto.Message = String.Empty;
-            try
-            {
-                foreach (PdfPageBase page in doc.Pages)
+            foreach (PdfPageBase page in doc.Pages)
                 {
                     PdfTilingBrush brush = new PdfTilingBrush(new SizeF(page.Canvas.ClientSize.Width / 2, page.Canvas.ClientSize.Height / 3));
                     brush.Graphics.SetTransparency(0.3f);
@@ -32,15 +27,8 @@ namespace TaureauPDFProcessor
                     brush.Graphics.SetTransparency(1);
                     page.Canvas.DrawRectangle(brush, new RectangleF(new PointF(0, 0), page.Canvas.ClientSize));
                 }
-                dto.pdf = doc;
-            }
+            return Task.FromResult(doc);
 
-            catch (Exception ex)
-            {
-                dto.Message = ex.Message;
-            }
-
-            return dto;
         }
     }
 }

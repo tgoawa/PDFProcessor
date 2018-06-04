@@ -87,7 +87,7 @@ namespace TaureauPDFProcessor
             }
         }
 
-        private void runProcessButton_Click(object sender, EventArgs e)
+        private async void runProcessButton_Click(object sender, EventArgs e)
         {
             var projectToProcess = new ProcessPDF();
             this.project.ProjectName = this.textBox1.Text;
@@ -120,7 +120,13 @@ namespace TaureauPDFProcessor
             }
             this.submitLabel.Text = "";
             this.processingLabel.Text = "Now processing " + this.project.CompanyNames.Length + " different companies";
-            projectToProcess.RunProject(this.project);
+            string message= await  projectToProcess.RunProject(this.project);
+            if (string.IsNullOrEmpty(message))
+                message = "Process completed";
+            //if (isfinished)
+            //{
+            //    this.submitLabel.Text = message;
+            //}
         }
 
     }
