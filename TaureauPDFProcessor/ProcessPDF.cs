@@ -13,7 +13,7 @@ namespace TaureauPDFProcessor
     {
         Watermark water = new Watermark();
         Security sec = new Security();
-        public async void RunProject(ProjectModel project)
+        public async Task<bool> RunProject(ProjectModel project)
         {   
             try
             {
@@ -40,6 +40,8 @@ namespace TaureauPDFProcessor
 
                     await Task.Delay(500);
                 }
+
+                return true;
             }
             catch (Exception)
             {

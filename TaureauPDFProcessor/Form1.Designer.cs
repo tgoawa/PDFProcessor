@@ -171,9 +171,8 @@
             this.processingLabel.AutoSize = true;
             this.processingLabel.Location = new System.Drawing.Point(432, 353);
             this.processingLabel.Name = "processingLabel";
-            this.processingLabel.Size = new System.Drawing.Size(29, 13);
+            this.processingLabel.Size = new System.Drawing.Size(0, 13);
             this.processingLabel.TabIndex = 16;
-            this.processingLabel.Text = "label";
             // 
             // Form1
             // 
