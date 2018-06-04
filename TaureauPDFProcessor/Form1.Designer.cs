@@ -44,6 +44,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.processingLabel = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openPDFDialog
@@ -174,11 +175,23 @@
             this.processingLabel.Size = new System.Drawing.Size(0, 13);
             this.processingLabel.TabIndex = 16;
             // 
+            // close
+            // 
+            this.close.AccessibleName = "Close Button";
+            this.close.Location = new System.Drawing.Point(16, 464);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(140, 23);
+            this.close.TabIndex = 17;
+            this.close.Text = "Close Application";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 627);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.processingLabel);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -217,6 +230,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label processingLabel;
+        private System.Windows.Forms.Button close;
     }
 }
 
