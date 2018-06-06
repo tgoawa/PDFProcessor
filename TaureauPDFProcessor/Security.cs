@@ -12,8 +12,7 @@ namespace TaureauPDFProcessor
         public Task<PdfDocument> SetSecurity(PdfDocument pdf, string password)
         {
                 pdf.Security.KeySize = Spire.Pdf.Security.PdfEncryptionKeySize.Key256Bit;
-                pdf.Security.OwnerPassword = "schenck";
-                pdf.Security.UserPassword = password;
+                pdf.Security.OwnerPassword = password;
                 pdf.Security.Permissions = Spire.Pdf.Security.PdfPermissionsFlags.Print;
 
             return Task.FromResult(pdf);
