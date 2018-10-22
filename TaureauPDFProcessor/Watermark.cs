@@ -21,7 +21,7 @@ namespace TaureauPDFProcessor
                 brush.Graphics.TranslateTransform(100, 200);
                 brush.Graphics.RotateTransform(-45);
                 brush.Graphics.DrawString(companyName,
-                    new PdfFont(PdfFontFamily.Helvetica, 24), PdfBrushes.Purple, 0, 0,
+                    new PdfFont(PdfFontFamily.Helvetica, 24), PdfBrushes.Gray, 0, 0,
                     new PdfStringFormat(PdfTextAlignment.Left));
                 brush.Graphics.Restore();
                 brush.Graphics.SetTransparency(1);
