@@ -22,21 +22,10 @@ namespace TaureauPDFProcessor
                 brush.Graphics.RotateTransform(-45);
                 brush.Graphics.DrawString(companyName,
                     new PdfFont(PdfFontFamily.Helvetica, 24), PdfBrushes.Gray, 0, 0,
-                    new PdfStringFormat(PdfTextAlignment.Left));
+                    new PdfStringFormat(PdfTextAlignment.Center));
                 brush.Graphics.Restore();
                 brush.Graphics.SetTransparency(1);
                 page.Canvas.DrawRectangle(brush, new RectangleF(new PointF(0, 0), page.Canvas.ClientSize));
-                //float calculateDistance = (page.Canvas.ClientSize.Height - 80) / 3;
-                //float height = 40;
-                //for (var count = 0; count < 4; count++)
-                //{
-                //page.Canvas.DrawString(companyName,
-                //    new PdfFont(PdfFontFamily.Helvetica, 25f),
-                //    new PdfSolidBrush(Color.Green),
-                //    10, height);
-                //    height = height + calculateDistance;
-                //}
-                //page.Canvas.RotateTransform(-20);
             }
             return Task.FromResult(doc);
 
