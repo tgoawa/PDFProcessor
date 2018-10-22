@@ -18,7 +18,7 @@ namespace TaureauPDFProcessor
                 PdfTilingBrush brush = new PdfTilingBrush(new SizeF(page.Canvas.ClientSize.Width, page.Canvas.ClientSize.Height));
                 brush.Graphics.SetTransparency(0.3f);
                 brush.Graphics.Save();
-                brush.Graphics.TranslateTransform(100, 200);
+                brush.Graphics.TranslateTransform(350, 215);
                 brush.Graphics.RotateTransform(-45);
                 brush.Graphics.DrawString(companyName,
                     new PdfFont(PdfFontFamily.Helvetica, 24), PdfBrushes.Gray, 0, 0,
